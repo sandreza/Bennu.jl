@@ -7,3 +7,5 @@ grid = brickgrid(LobattoCell(5, 4), (-1:1//8:1, -1:1//8:1);
 vtk_grid("grid", grid) do vtk
     vtk["CellNumber"] = 1:length(grid)
 end
+# for testing purposes return true at end
+true

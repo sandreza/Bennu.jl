@@ -5,6 +5,7 @@ using Printf
 using LinearAlgebra
 using WriteVTK
 CUDA.allowscalar(false)
+CUDA.allowscalar(true)
 
 # advection velocity
 const v = SVector(1, 1)
@@ -175,3 +176,6 @@ let
         join(["rate for levels $l → $(l + 1) = $(rates[l])"
               for l in 1:(numlevels - 1)], "\n")
 end
+
+# for testing purposes return true at end 
+true
